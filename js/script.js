@@ -41,5 +41,6 @@ button.addEventListener('click', function() {
 })
 
 reset.addEventListener('click', function() {
-    inputAge.innerHTML = " ";
+    inputAge.value = " ";
+    inputKm.value = " ";
 })
