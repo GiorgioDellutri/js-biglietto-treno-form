@@ -9,14 +9,14 @@ button.addEventListener('click', function() {
     console.log(parseInt(inputKm.value));
     console.log(parseInt(inputAge.value));
     
-    let prezzo =(0.2762 * inputKm.value);
+    let prezzo = (0.2762 * inputKm.value);
 
-    if (parseInt(inputAge.value) < 18) {
+    if (inputAge.value < 18) {
 
         let scontoDiciassette = prezzo *17.5 / 100;
         output.innerHTML = 'Il costo del biglietto è: '+scontoDiciassette.toFixed(2) + '&euro;';
 
-    } else if (parseInt(inputAge.value) > 65) {
+    } else if (inputAge.value > 65) {
 
         let scontoTrenta = prezzo *33.3 / 100;
         output.innerHTML= 'Il costo del biglietto è: ' +scontoTrenta.toFixed(2) + '&euro;';
@@ -25,5 +25,5 @@ button.addEventListener('click', function() {
         output.innerHTML='Il costo del biglietto è: ' +prezzo.toFixed(2) + '&euro;';
     }
     console.log(prezzo)
-    
+
 })
